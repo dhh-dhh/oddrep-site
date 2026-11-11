@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 · 奇动 OddRep</title>
+<meta name="description" content="Privacy Policy for OddRep — the app collects no data.">
+<style>
+  :root{
+    --bg:#fbfaf8; --card:#ffffff; --ink:#1c1b19; --muted:#6b6762;
+    --line:#e8e4dd; --accent:#b4531f;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#141311; --card:#1c1b19; --ink:#f2efe9; --muted:#a39d94;
+           --line:#2e2c28; --accent:#e0824c; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.72 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC",
+         "Helvetica Neue","Noto Sans SC",sans-serif;
+    letter-spacing:.01em;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:40px 22px 80px}
+  header{display:flex;align-items:flex-start;justify-content:space-between;
+         gap:16px;flex-wrap:wrap;margin-bottom:8px}
+  h1{font-size:27px;line-height:1.3;margin:0;font-weight:650;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:13.5px;margin-top:6px}
+  .lang{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);
+        border-radius:999px;padding:3px}
+  .lang button{
+    appearance:none;border:0;background:transparent;color:var(--muted);
+    font:inherit;font-size:13px;padding:5px 13px;border-radius:999px;cursor:pointer;
+  }
+  .lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+  .meta{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);
+        font-size:13px;margin:22px 0 30px;padding-bottom:22px;
+        border-bottom:1px solid var(--line)}
+  .lead{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;margin:0 0 34px;font-size:15.5px;
+  }
+  .lead strong{color:var(--accent);font-weight:650}
+  h2{font-size:16.5px;margin:34px 0 10px;font-weight:650;letter-spacing:0}
+  h2 span{color:var(--muted);font-weight:500;font-size:13.5px;margin-right:8px}
+  p{margin:0 0 12px}
+  ul{margin:0 0 14px;padding-left:20px}
+  li{margin:4px 0}
+  table{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:14.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);
+        vertical-align:top}
+  th{color:var(--muted);font-weight:560;font-size:13px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;
+       background:rgba(128,128,128,.13);padding:1px 5px;border-radius:5px}
+  footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+         color:var(--muted);font-size:13.5px}
+  a{color:var(--accent)}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <h1 id="title">隐私政策 · 奇动</h1>
+      <div class="sub" id="subtitle">OddRep · 手腕运动记录</div>
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="btn-zh" aria-pressed="true">中文</button>
+      <button id="btn-en" aria-pressed="false">English</button>
+    </div>
+  </header>
+
+  <!-- ===================== 中文 ===================== -->
+  <main id="zh">
+    <div class="meta">
+      <span>生效日期：2026 年 11 月 11 日</span>
+      <span>最后更新：2026 年 11 月 11 日</span>
+    </div>
+
+    <p class="lead">奇动<strong>不收集你的任何数据</strong>。所有记录只保存在你的 Apple Watch 和 iPhone 上，App 没有联网功能，没有账号体系，也没有任何分析或广告组件。</p>
+
+    <h2><span>01</span>我们收集什么</h2>
+    <p><strong>不收集任何数据。</strong></p>
+    <p>本 App 不包含网络请求代码，不包含第三方 SDK，不包含崩溃上报或行为分析工具。我们无法访问、查看或获取你在 App 内的任何内容。</p>
+
+    <h2><span>02</span>数据存在哪里</h2>
+    <table>
+      <thead><tr><th>数据</th><th>存放位置</th><th>谁能访问</th></tr></thead>
+      <tbody>
+        <tr><td>运动记录（次数、时长、节奏、活动名称、过程曲线）</td><td>iPhone App 沙盒内的 <code>sessions.json</code>；手表端同名文件</td><td>仅你本人和你的设备</td></tr>
+        <tr><td>原始运动采样（可选开启）</td><td>App 沙盒内的 CSV 文件</td><td>仅你本人和你的设备</td></tr>
+        <tr><td>活动参数与偏好设置</td><td>设备本地 <code>UserDefaults</code></td><td>仅你本人和你的设备</td></tr>
+        <tr><td>心率</td><td>记录中的摘要值 + 苹果健康数据库（自动写入或手动同步时）</td><td>仅你本人和你的设备</td></tr>
+      </tbody>
+    </table>
+    <p>这些数据不会被上传到任何服务器。卸载 App 会一并删除 App 沙盒内的全部文件。</p>
+
+    <h2><span>03</span>苹果健康（HealthKit）</h2>
+    <p>奇动在以下两种情况下访问 HealthKit。写入默认自动进行，你可以随时在概览页关闭。</p>
+    <p><strong>写入</strong>：记录从手表传到 iPhone 后，App 会自动把它写成一条体能训练。饭后走一走记为「步行」，冥想与腹式呼吸记为「身心运动」，其余活动记为「其他」。计时活动不推断步数或呼吸次数；动作次数与节奏在适用时作为附加数据写入。自动同步可以在概览页关闭；关闭后，只有在记录详情里点击「同步到苹果健康」才会写入。演示与示例记录永不写入。</p>
+    <p><strong>读取</strong>：App 申请读取心率，用于在记录过程中显示当前心率、并在记录结束后保存平均值与最大值；自动写入训练时，也只读取该次记录时间段内的心率样本，用于关联到这次训练。App 不读取你的其他健康数据（步数、睡眠、体重、病历等一律不读），也不会把心率用于任何广告或营销用途。</p>
+    <p>按照 Apple 的要求，我们明确承诺：</p>
+    <ul>
+      <li>不会将 HealthKit 数据用于广告或类似用途；</li>
+      <li>不会将 HealthKit 数据出售、出租或转让给任何第三方；</li>
+      <li>不会将 HealthKit 数据用于任何与健康、健身无关的用途。</li>
+    </ul>
+    <p>已写入苹果健康的训练，需要你到「健康」App 中自行删除——奇动无法代为删除。</p>
+
+    <h2><span>04</span>数据导出与分享</h2>
+    <p>App 支持把记录导出为 CSV 文件（摘要、过程曲线、原始采样三种粒度）。导出后的文件是<strong>明文</strong>，存放位置由你在系统分享面板中选择（存储到「文件」、发给某人、传到网盘等）。一旦导出，文件的安全性由你选择的接收方和存放位置决定，不再受本 App 控制。</p>
+
+    <h2><span>05</span>儿童</h2>
+    <p>本 App 不面向 13 岁以下儿童设计，也不会有意收集儿童信息——事实上它不收集任何人的信息。</p>
+
+    <h2><span>06</span>你的权利</h2>
+    <p>由于我们不持有你的任何数据，也就不存在「请求访问」「请求删除」「请求导出」的流程需要走。你的数据始终在你自己的设备上，你可以：</p>
+    <ul>
+      <li>在 App 内删除单条记录；</li>
+      <li>在「健康」App 中删除已写入的训练；</li>
+      <li>卸载 App 以删除全部本地数据。</li>
+    </ul>
+
+    <h2><span>07</span>医疗免责</h2>
+    <p>奇动不是医疗器械，不提供任何医疗建议、诊断或治疗方案。心率与运动数据仅供参考，不能用于判断健康状况。如有健康问题，请咨询专业医疗人员。</p>
+
+    <h2><span>08</span>政策变更</h2>
+    <p>若未来版本引入联网功能（例如云同步），本政策会在功能上线前更新，并在 App 内明确告知。当前的「不收集」承诺适用于当前版本。</p>
+
+    <h2><span>09</span>联系方式</h2>
+    <p>段哈哈的两元店 · <a href="mailto:spduan@mail.ustc.edu.cn">spduan@mail.ustc.edu.cn</a></p>
+  </main>
+
+  <!-- ===================== English ===================== -->
+  <main id="en" hidden>
+    <div class="meta">
+      <span>Effective: November 11, 2026</span>
+      <span>Last updated: November 11, 2026</span>
+    </div>
+
+    <p class="lead">OddRep <strong>collects nothing</strong>. Every session stays on your Apple Watch and iPhone. The app has no networking, no accounts, and no analytics or advertising components.</p>
+
+    <h2><span>01</span>What we collect</h2>
+    <p><strong>Nothing.</strong></p>
+    <p>The app contains no network request code, no third-party SDKs, and no crash-reporting or behavioral analytics. We cannot access, view, or obtain anything you do inside the app.</p>
+
+    <h2><span>02</span>Where your data lives</h2>
+    <table>
+      <thead><tr><th>Data</th><th>Location</th><th>Who can access it</th></tr></thead>
+      <tbody>
+        <tr><td>Sessions (rep count, duration, tempo, activity name, motion curve)</td><td><code>sessions.json</code> inside the iPhone app sandbox; same file on Apple Watch</td><td>You and your devices only</td></tr>
+        <tr><td>Raw motion samples (optional)</td><td>CSV files inside the app sandbox</td><td>You and your devices only</td></tr>
+        <tr><td>Activity parameters and preferences</td><td>Local <code>UserDefaults</code></td><td>You and your devices only</td></tr>
+        <tr><td>Heart rate</td><td>Summary values in each session, plus the Apple Health database (on automatic sync or a manual tap)</td><td>You and your devices only</td></tr>
+      </tbody>
+    </table>
+    <p>None of this is uploaded anywhere. Deleting the app deletes every file in its sandbox.</p>
+
+    <h2><span>03</span>Apple Health (HealthKit)</h2>
+    <p>OddRep touches HealthKit in exactly two situations. Writing happens automatically by default, and you can turn that off at any time in the Overview tab.</p>
+    <p><strong>Writing.</strong> Once a session syncs from the Watch to the iPhone, the app writes it as Walking for after-meal walks, Mind and Body for meditation and belly breathing, and Other for the remaining activities. Timed activities do not infer steps or breaths. Rep count and tempo are attached as additional data where applicable. Automatic sync can be switched off in the Overview tab; after that, a workout is written only when you tap "Sync to Apple Health" on a session detail screen. Demo and sample sessions are never written.</p>
+    <p><strong>Reading.</strong> The app requests read access to heart rate, to show your current heart rate while recording and to store the average and maximum when the session ends. When writing a workout it also reads heart-rate samples inside that session's time window, only to attach them to the workout. It does not read any other health data (steps, sleep, body weight, medical records — none of it), and heart rate is never used for advertising or marketing.</p>
+    <p>As required by Apple, we commit that we will not:</p>
+    <ul>
+      <li>use HealthKit data for advertising or similar services;</li>
+      <li>sell, rent, or transfer HealthKit data to any third party;</li>
+      <li>use HealthKit data for any purpose unrelated to health and fitness.</li>
+    </ul>
+    <p>Workouts already written to Apple Health must be deleted by you in the Health app — OddRep cannot remove them.</p>
+
+    <h2><span>04</span>Export and sharing</h2>
+    <p>The app can export sessions as CSV at three levels of detail (summary, motion curve, raw samples). Exported files are <strong>plain text</strong>, and where they end up is entirely your choice in the system share sheet. Once exported, the file's safety depends on where you sent it, not on this app.</p>
+
+    <h2><span>05</span>Children</h2>
+    <p>This app is not directed at children under 13, and it does not knowingly collect information from anyone — in fact it collects information from no one.</p>
+
+    <h2><span>06</span>Your rights</h2>
+    <p>Because we hold none of your data, there is no access, deletion, or portability request to file. Your data is always on your own devices, and you can:</p>
+    <ul>
+      <li>delete individual sessions inside the app;</li>
+      <li>delete synced workouts in the Health app;</li>
+      <li>delete the app to remove all local data.</li>
+    </ul>
+
+    <h2><span>07</span>Medical disclaimer</h2>
+    <p>OddRep is not a medical device and provides no medical advice, diagnosis, or treatment. Heart rate and motion figures are for reference only and must not be used to assess your health. Consult a qualified professional for health concerns.</p>
+
+    <h2><span>08</span>Changes</h2>
+    <p>If a future version adds networking (for example cloud sync), this policy will be updated before that feature ships, and the change will be disclosed in the app. The "collect nothing" commitment applies to the current version.</p>
+
+    <h2><span>09</span>Contact</h2>
+    <p>Duan Haha's Two-Yuan Store · <a href="mailto:spduan@mail.ustc.edu.cn">spduan@mail.ustc.edu.cn</a></p>
+  </main>
+
+  <footer>
+    <span id="foot-zh">奇动 · OddRep &nbsp;|&nbsp; <a href="./support.html">支持与联系</a></span>
+    <span id="foot-en" hidden>OddRep &nbsp;|&nbsp; <a href="./support.html">Support</a></span>
+  </footer>
+</div>
+
+<script>
+  var zh = document.getElementById('zh'), en = document.getElementById('en');
+  var bz = document.getElementById('btn-zh'), be = document.getElementById('btn-en');
+  function setLang(l){
+    var isZh = l === 'zh';
+    zh.hidden = !isZh; en.hidden = isZh;
+    bz.setAttribute('aria-pressed', isZh); be.setAttribute('aria-pressed', !isZh);
+    document.getElementById('title').textContent = isZh ? '隐私政策 · 奇动' : 'Privacy Policy · OddRep';
+    document.getElementById('subtitle').textContent = isZh ? 'OddRep · 手腕运动记录' : 'OddRep · Wrist motion logging';
+    document.getElementById('foot-zh').hidden = !isZh;
+    document.getElementById('foot-en').hidden = isZh;
+    document.documentElement.lang = isZh ? 'zh-Hans' : 'en';
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  bz.onclick = function(){ setLang('zh'); };
+  be.onclick = function(){ setLang('en'); };
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch(e){}
+  if (!saved) saved = (navigator.language || 'zh').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+  setLang(saved);
+</script>
+</body>
+</html>
