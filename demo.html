@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OddRep 1.0 — Demo Recording · App Review</title>
+<meta name="description" content="A 31-second iPhone screen recording of OddRep 1.0: connecting to Apple Watch, a live wrist-motion session, ending it, and reviewing the saved record, trends and insights.">
+<meta name="robots" content="index,follow">
+<style>
+  :root{
+    --bg:#08090b; --panel:#12141a; --panel-2:#171a21; --line:#242833;
+    --ink:#f2f4f8; --ink-2:#a9b0bf; --ink-3:#6f7787;
+    --accent:#ff5a3c; --accent-soft:rgba(255,90,60,.12);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font:16px/1.68 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","PingFang SC","Hiragino Sans GB",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent)}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;
+         background:rgba(8,9,11,.86);backdrop-filter:blur(14px)}
+  .nav{display:flex;align-items:center;gap:12px;height:62px}
+  .nav img{width:28px;height:28px;border-radius:7px}
+  .nav .brand{font-weight:650;font-size:15px;letter-spacing:.2px}
+  .nav .spacer{flex:1}
+  .langbtn{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .langbtn button{background:none;border:0;color:var(--ink-2);padding:6px 13px;
+                  font-size:13px;cursor:pointer;font-family:inherit}
+  .langbtn button.on{background:var(--accent-soft);color:var(--ink)}
+
+  .hero{padding:52px 0 8px}
+  .eyebrow{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+           color:var(--accent);border:1px solid rgba(255,90,60,.35);background:var(--accent-soft);
+           padding:5px 11px;border-radius:999px;margin-bottom:18px}
+  h1{font-size:clamp(28px,4vw,40px);line-height:1.16;margin:0 0 12px;
+     letter-spacing:-.02em;font-weight:700}
+  .lede{color:var(--ink-2);font-size:17px;margin:0;max-width:42em}
+  .facts{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 0}
+  .fact{border:1px solid var(--line);background:var(--panel);color:var(--ink-2);
+        font-size:12.5px;padding:6px 12px;border-radius:999px}
+
+  .stage{display:grid;grid-template-columns:300px 1fr;gap:36px;align-items:start;
+         padding:36px 0 8px;margin-top:26px;border-top:1px solid var(--line)}
+  .player{border:1px solid var(--line);border-radius:22px;overflow:hidden;
+          background:var(--panel-2);box-shadow:0 24px 60px rgba(0,0,0,.45)}
+  .player video{display:block;width:100%;height:auto;background:#000}
+
+  h2{font-size:20px;margin:0 0 14px;letter-spacing:-.01em}
+  .chapters{list-style:none;margin:0;padding:0}
+  .chapters li{display:flex;gap:14px;padding:11px 0;border-top:1px solid var(--line)}
+  .chapters li:first-child{border-top:0;padding-top:0}
+  .ts{flex:0 0 52px;color:var(--accent);font-variant-numeric:tabular-nums;
+      font-size:13px;font-weight:600;padding-top:2px}
+  .chapters b{display:block;font-size:14.5px;font-weight:620;margin-bottom:2px}
+  .chapters span{color:var(--ink-2);font-size:13.5px;line-height:1.55}
+
+  section{padding:40px 0;border-top:1px solid var(--line);margin-top:20px}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .card h3{margin:0 0 6px;font-size:14px;font-weight:650}
+  .card p{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.6}
+  .dl{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:22px}
+  .btn{display:inline-block;padding:11px 18px;border-radius:11px;text-decoration:none;
+       font-weight:600;font-size:14px}
+  .btn.ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn.primary{background:var(--accent);color:#fff}
+  code{font:13px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink-2);
+       background:var(--panel-2);border:1px solid var(--line);border-radius:6px;
+       padding:2px 6px;word-break:break-all}
+  footer{padding:34px 0 70px;color:var(--ink-3);font-size:13px;border-top:1px solid var(--line)}
+  footer a{color:var(--ink-2)}
+  [hidden]{display:none!important}
+  @media (max-width:760px){
+    .stage{grid-template-columns:1fr;justify-items:center;gap:28px}
+    .player{width:260px}
+    .cards{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <img src="icon.png" alt="OddRep icon">
+    <span class="brand">OddRep</span>
+    <span class="spacer"></span>
+    <div class="langbtn" role="group" aria-label="Language">
+      <button type="button" data-lang="en" class="on">EN</button>
+      <button type="button" data-lang="zh">中文</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow" data-en="App Review · Version 1.0" data-zh="审核资料 · 版本 1.0">App Review · Version 1.0</div>
+    <h1 data-en="OddRep 1.0 — demo recording" data-zh="奇动 1.0 — 演示录屏">OddRep 1.0 — demo recording</h1>
+    <p class="lede"
+       data-en="A 31-second iPhone screen recording captured on a real device: the app connects to a paired Apple Watch, runs a live wrist-motion session with phone-side start / pause / finish, then shows the saved record, trends and insights."
+       data-zh="这是一段在真机上录制的 31 秒 iPhone 屏幕录像：App 连接已配对的 Apple Watch，进行一场实时手腕动作记录（手机端可开始 / 暂停 / 结束），随后查看已保存的记录、趋势与洞察。">A 31-second iPhone screen recording captured on a real device: the app connects to a paired Apple Watch, runs a live wrist-motion session with phone-side start / pause / finish, then shows the saved record, trends and insights.</p>
+    <div class="facts">
+      <span class="fact" data-en="31 s · iPhone screen recording" data-zh="31 秒 · iPhone 屏幕录制">31 s · iPhone screen recording</span>
+      <span class="fact" data-en="Real Apple Watch paired" data-zh="已配对真机 Apple Watch">Real Apple Watch paired</span>
+      <span class="fact" data-en="English UI" data-zh="英文界面">English UI</span>
+      <span class="fact" data-en="No account required" data-zh="无需账号">No account required</span>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="player">
+      <video controls playsinline preload="metadata"
+             poster="media/oddrep-demo-poster.png"
+             src="media/oddrep-demo-2026-11-12.mp4">
+        <span data-en="Your browser cannot play this video." data-zh="当前浏览器无法播放此视频。">Your browser cannot play this video.</span>
+      </video>
+    </div>
+
+    <div>
+      <h2 data-en="What the recording shows" data-zh="录屏里发生了什么">What the recording shows</h2>
+      <ul class="chapters">
+        <li>
+          <span class="ts">0:00</span>
+          <div>
+            <b data-en="Launch from the Home Screen" data-zh="从主屏幕启动">Launch from the Home Screen</b>
+            <span data-en="The OddRep icon opens straight into the Workout tab. No sign-in, onboarding wall or permission prompt stands between launch and first use."
+                  data-zh="奇动图标点开后直接进入「运动」标签页，没有登录、引导墙或权限弹窗挡在启动与首次使用之间。">The OddRep icon opens straight into the Workout tab. No sign-in, onboarding wall or permission prompt stands between launch and first use.</span>
+          </div>
+        </li>
+        <li>
+          <span class="ts">0:03</span>
+          <div>
+            <b data-en="Phone → Watch handshake" data-zh="手机 → 手表握手">Phone → Watch handshake</b>
+            <span data-en="Status moves from “Checking Watch…” to “Waiting for Watch…”, then to an active session. A start request sent from the phone is executed by the Watch once it is reachable and idle; requests are never queued for later."
+                  data-zh="状态从「Checking Watch…」变为「Waiting for Watch…」，再变为进行中的会话。手机发出的开始请求会在手表可达且空闲时执行；请求不会排队等待稍后执行。">Status moves from “Checking Watch…” to “Waiting for Watch…”, then to an active session. A start request sent from the phone is executed by the Watch once it is reachable and idle; requests are never queued for later.</span>
+          </div>
+        </li>
+        <li>
+          <span class="ts">0:12</span>
+          <div>
+            <b data-en="Live session, mirrored state" data-zh="实时会话、两端同步的状态">Live session, mirrored state</b>
+            <span data-en="The Watch is recording “Fire drilling” (a built-in rep-counting activity). Recorded time, total reps, reps per minute, heart rate and counting time refresh from 1 Hz snapshots. An iPhone snapshot timestamp is shown so the reviewer can see data freshness."
+                  data-zh="手表正在记录「钻木取火」（内置计次活动）。已记录时长、总次数、每分钟次数、心率与计次时长依据 1 Hz 状态快照刷新，并显示快照时间戳，便于判断数据新鲜度。">The Watch is recording “Fire drilling” (a built-in rep-counting activity). Recorded time, total reps, reps per minute, heart rate and counting time refresh from 1 Hz snapshots. An iPhone snapshot timestamp is shown so the reviewer can see data freshness.</span>
+          </div>
+        </li>
+        <li>
+          <span class="ts">0:19</span>
+          <div>
+            <b data-en="Finishing from the phone" data-zh="在手机上结束">Finishing from the phone</b>
+            <span data-en="Pause and Finish are available on both ends. Tapping Finish asks for confirmation because the save happens on the Watch; the iPhone keeps the last snapshot until the Watch reports that the session was saved."
+                  data-zh="暂停与结束在两端都可操作。点「结束」会先确认，因为保存发生在手表端；在手表回报保存成功之前，手机保留最后一次快照。">Pause and Finish are available on both ends. Tapping Finish asks for confirmation because the save happens on the Watch; the iPhone keeps the last snapshot until the Watch reports that the session was saved.</span>
+          </div>
+        </li>
+        <li>
+          <span class="ts">0:23</span>
+          <div>
+            <b data-en="Overview: trends" data-zh="概览：趋势">Overview: trends</b>
+            <span data-en="Total duration and record count for the selected range, a daily-duration line chart and a daily-reps bar chart. Demo/sample records are excluded from these totals and labelled as such."
+                  data-zh="所选区间的总时长与记录条数、每日时长折线图、每日次数柱状图。示例/演示记录不计入这些统计，并在界面上标注。">Total duration and record count for the selected range, a daily-duration line chart and a daily-reps bar chart. Demo/sample records are excluded from these totals and labelled as such.</span>
+          </div>
+        </li>
+        <li>
+          <span class="ts">0:27</span>
+          <div>
+            <b data-en="Records and Insights" data-zh="记录与洞察">Records and Insights</b>
+            <span data-en="The record saved from the Watch appears in Records with reps, duration and average cadence, and is exportable to CSV. Insights aggregates cadence and heart rate across sessions only where measurements exist; missing values are never estimated."
+                  data-zh="手表保存的记录出现在「记录」中，含次数、时长与平均频率，可导出 CSV。「洞察」仅在有实测值时才汇总频率与心率，缺失值从不估算。">The record saved from the Watch appears in Records with reps, duration and average cadence, and is exportable to CSV. Insights aggregates cadence and heart rate across sessions only where measurements exist; missing values are never estimated.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <section>
+    <h2 data-en="Good to know" data-zh="补充说明">Good to know</h2>
+    <div class="cards">
+      <div class="card">
+        <h3 data-en="The Watch screen is not captured" data-zh="录屏不含手表画面">The Watch screen is not captured</h3>
+        <p data-en="The Apple Watch cannot be captured by an iPhone screen recording. Watch-side actions are visible indirectly, through the mirrored session state on the phone. A desk-based Watch interface check is available in-app: Settings › Data › Demo Mode."
+           data-zh="iPhone 屏幕录制无法拍到 Apple Watch 画面。手表端的操作通过手机端镜像的会话状态间接体现。如需在桌面上检查手表界面，App 内提供「设置 › 数据 › 演示模式」。">The Apple Watch cannot be captured by an iPhone screen recording. Watch-side actions are visible indirectly, through the mirrored session state on the phone. A desk-based Watch interface check is available in-app: Settings › Data › Demo Mode.</p>
+      </div>
+      <div class="card">
+        <h3 data-en="Test data, real sensors" data-zh="测试数据、真实传感器">Test data, real sensors</h3>
+        <p data-en="Sessions in this recording come from wrist motion on a real Watch. Rep counts are estimates derived from wrist acceleration peaks — not activity recognition, form evaluation or medical measurement."
+           data-zh="本录屏中的会话来自真实手表的手腕动作。计次是对手腕加速度峰值的估算，不涉及动作识别、姿态评估或医学测量。">Sessions in this recording come from wrist motion on a real Watch. Rep counts are estimates derived from wrist acceleration peaks — not activity recognition, form evaluation or medical measurement.</p>
+      </div>
+      <div class="card">
+        <h3 data-en="No account, no backend" data-zh="无账号、无后端">No account, no backend</h3>
+        <p data-en="Nothing is uploaded to the developer. There are no analytics or advertising SDKs. Watch↔iPhone transfer uses WatchConnectivity; Apple Health sync is optional and can be turned off in the app."
+           data-zh="不会向开发者上传任何数据，也没有分析或广告 SDK。手表与手机之间使用 WatchConnectivity 传输；苹果健康同步可选，可在 App 内关闭。">Nothing is uploaded to the developer. There are no analytics or advertising SDKs. Watch↔iPhone transfer uses WatchConnectivity; Apple Health sync is optional and can be turned off in the app.</p>
+      </div>
+      <div class="card">
+        <h3 data-en="Want to try it without a Watch?" data-zh="没有手表也想试？">Want to try it without a Watch?</h3>
+        <p data-en="Open Records › Sample Experience › View Sample Records to inspect four sample sessions with charts. Samples are clearly marked, are not written to Apple Health and cannot be exported."
+           data-zh="打开「记录 › 示例体验 › 查看示例记录」，可查看四条带图表的示例会话。示例均有明确标注，不写入苹果健康，也不可导出。">Open Records › Sample Experience › View Sample Records to inspect four sample sessions with charts. Samples are clearly marked, are not written to Apple Health and cannot be exported.</p>
+      </div>
+    </div>
+
+    <div class="dl">
+      <a class="btn primary" href="media/oddrep-demo-2026-11-12.mp4" download
+         data-en="Download the MP4 (1.5 MB)" data-zh="下载 MP4（1.5 MB）">Download the MP4 (1.5 MB)</a>
+      <a class="btn ghost" href="index.html" data-en="Privacy policy" data-zh="隐私政策">Privacy policy</a>
+      <a class="btn ghost" href="support.html" data-en="Support" data-zh="支持">Support</a>
+    </div>
+    <p style="color:var(--ink-3);font-size:12.5px;margin-top:16px">
+      <span data-en="Direct file URL:" data-zh="文件直链：">Direct file URL:</span>
+      <code id="directurl">media/oddrep-demo-2026-11-12.mp4</code>
+    </p>
+  </section>
+
+  <footer>
+    <span data-en="OddRep · Wrist-motion recorder for Apple Watch · © 2026 Shipeng Duan"
+          data-zh="奇动 · Apple Watch 手腕动作记录 · © 2026 段世鹏">OddRep · Wrist-motion recorder for Apple Watch · © 2026 Shipeng Duan</span>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  var base = location.href.replace(/[^/]*$/, '');
+  document.getElementById('directurl').textContent = base + 'media/oddrep-demo-2026-11-12.mp4';
+  var btns = document.querySelectorAll('.langbtn button');
+  function apply(lang){
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      var v = el.getAttribute('data-' + lang);
+      if (v !== null) el.textContent = v;
+    });
+    btns.forEach(function(b){ b.classList.toggle('on', b.dataset.lang === lang); });
+    try { localStorage.setItem('oddrep-demo-lang', lang); } catch(e){}
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ apply(b.dataset.lang); }); });
+  var saved = null;
+  try { saved = localStorage.getItem('oddrep-demo-lang'); } catch(e){}
+  var initial = saved || ((navigator.language || 'en').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
+  apply(initial);
+})();
+</script>
+</body>
+</html>
